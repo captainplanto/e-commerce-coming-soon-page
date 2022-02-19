@@ -1,0 +1,274 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page-container {
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+.page-container .bg-pattern-desktop img {
+  object-fit: cover;
+  width: 50vw;
+  height: 100vh;
+}
+
+.page-container #hero-img-desktop img {
+  object-fit: cover;
+  width: 50vw;
+  height: 100vh;
+}
+
+#shop__logo {
+  width: 60%;
+
+  object-fit: contain;
+  width: 4rem;
+  position: absolute;
+  top: 5rem;
+  left: 10%;
+  z-index: 1;
+}
+
+.shop-content-container {
+  width: 90%;
+  position: absolute;
+  z-index: 1;
+  top: 15rem;
+  left: 10%;
+}
+
+.Coming-Soon h1,
+span {
+  margin-top: 3rem;
+  font-size: 5rem;
+  font-weight: 400;
+  width: 20%;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: hsl(0, 6%, 24%);
+}
+
+.Coming-Soon span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.shop-content-container p {
+  color: hsl(0, 36%, 70%);
+  font-weight: 100;
+  width: 25%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#email-input {
+  width: 30%;
+  margin-top: 30px;
+  border: 1px solid hsl(0, 36%, 70%);
+  outline: none;
+  padding: 1.5rem 2rem 1.5rem 1.3rem;
+  border-radius: 40px;
+  position: relative;
+}
+
+#email-input:active {
+  border-color: hsl(0, 36%, 70%);
+}
+
+.Icon-Arrow {
+  border: none;
+  background-color: rgb(255, 245, 245);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 245, 245, 1) 6%,
+    rgba(238, 140, 140, 1) 85%
+  );
+  padding: 1.5rem 4rem 1.7rem 4rem;
+  border-radius: 40px;
+  color: white;
+
+  top: 86%;
+  left: 23%;
+  position: absolute;
+  z-index: 1;
+}
+
+.Icon-Arrow:hover {
+  background: hsl(0, 80%, 86%);
+  cursor: pointer;
+  transition: ease-in 0.5ms;
+}
+::placeholder {
+  color: hsl(0, 36%, 70%);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.success__error__control {
+  z-index: 0;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+#error_message,
+#success_message {
+  display: none;
+}
+
+#error_message {
+  color: red;
+}
+#success_message {
+  color: green;
+}
+
+.hero-img-mobile img {
+  display: none;
+}
+
+.bg-pattern-mobile img {
+  display: none;
+}
+
+/*This section shows the media Query(Responsiveness for this design)*/
+
+@media only screen and (min-width: 200px) and (max-width: 420px) {
+  #hero-img-desktop img {
+    display: none;
+  }
+
+  .bg-pattern-desktop img {
+    display: none;
+  }
+
+  #shop__logo {
+    top: 1rem;
+  }
+
+  #shop__logo img {
+    width: 8rem;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-img-mobile img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin-top: 5rem;
+  }
+
+  .bg-pattern-mobile img {
+    object-fit: cover;
+    width: 100%;
+    height: 62vh;
+    display: block;
+  }
+
+  .hero-img-mobile {
+    order: 1;
+  }
+
+  .bg-pattern-mobile {
+    order: 2;
+  }
+  .shop-content-container {
+    left: 0;
+  }
+  .shop-content-container {
+    width: 100%;
+    padding-top: 40%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .Coming-Soon h1,
+  span {
+    width: 80%;
+    font-size: 3rem;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .shop-content-container p {
+    width: 95%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: center;
+  }
+
+  #email-input {
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .Icon-Arrow {
+    top: 87%;
+    left: 66%;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 820px) {
+  .Coming-Soon h1,
+  span {
+    width: 8%;
+    font-size: 3rem;
+  }
+
+  .shop-content-container p {
+    width: 40%;
+  }
+
+  .Icon-Arrow {
+    top: 85%;
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+  .Coming-Soon h1,
+  span {
+    font-size: 2.5rem;
+  }
+
+  .shop-content-container p {
+    width: 40%;
+  }
+
+  .Icon-Arrow {
+    top: 83%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .Icon-Arrow {
+    top: 87%;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 2600px) {
+  .shop-content-container {
+    margin-top: 5%;
+  }
+
+  .shop-content-container p {
+    line-height: 2rem;
+  }
+
+  .Icon-Arrow {
+    left: 25%;
+    top: 87%;
+  }
+}
